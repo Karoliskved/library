@@ -58,6 +58,7 @@ function updateDisplay(book, index){
     bookCard.appendChild(readButton)
     bookCard.appendChild(removeButton)
     removeButton.addEventListener('click', handleRemove)
+    readButton.addEventListener('click', handleRead)
 
 
 }
@@ -66,6 +67,15 @@ function handleRemove(){
     console.log(index.slice(-1))
     myLibrary.splice(index.slice(-1), 1)
     console.log(myLibrary)
+    displayBooks()
+}
+function handleRead(){
+    let index=((this.id).toString()).slice(-1)
+    console.log(myLibrary[index].read)
+    if(myLibrary[index].read=='no')
+        myLibrary[index].read='yes'
+    else
+        myLibrary[index].read='no'
     displayBooks()
 
 }
