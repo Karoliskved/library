@@ -31,11 +31,11 @@ function updateDisplay(book, index) {
   const bookRead = document.createElement('div');
   const removeButton = document.createElement('button');
   const readButton = document.createElement('button');
-  bookName.textContent = book.title;
-  bookAuthor.textContent = book.author;
-  bookPages.textContent = book.pages;
+  bookName.textContent = 'Title: ' + book.title;
+  bookAuthor.textContent = 'Author: ' + book.author;
+  bookPages.textContent = 'Pages: ' + book.pages;
   bookRead.textContent = 'Read: ' + book.read;
-  readButton.textContent = 'read';
+  readButton.textContent = 'change read status';
   removeButton.textContent = 'remove book';
   bookCard.classList.add('bookCard');
   removeButton.classList.add('rmvButton');

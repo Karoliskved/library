@@ -9,24 +9,27 @@
   </head>
 
   <body>
-    <div class="container"></div>
-    <button class="formButton">NEW BOOK</button>
-    <div class="formContainer" hidden>
-      <form id="bookForm">
-        <label for="title">title</label
-        ><input type="text" id="title" required />
-        <label for="author">author</label
-        ><input type="text" id="author" required />
-        <label for="pages">pages</label
-        ><input type="number" id="pages" required />
-        <div>have you read the book?</div>
-        <div>
-          <label for="true">yes</label
-          ><input type="checkbox" id="true" name="status" />
-        </div>
-        <button class="addButton">add new book</button>
-      </form>
+    <div class="top">
+      <button class="formButton">NEW BOOK</button>
+      <div class="formContainer" hidden>
+        <form id="bookForm">
+          <label for="title">title</label
+          ><input type="text" id="title" required />
+          <label for="author">author</label
+          ><input type="text" id="author" required />
+          <label for="pages">pages</label
+          ><input type="number" id="pages" required />
+          <div>have you read the book?</div>
+          <div>
+            <label for="true">yes</label
+            ><input type="checkbox" id="true" name="status" />
+          </div>
+          <button class="addButton">add new book</button>
+        </form>
+      </div>
     </div>
+
+    <div class="container"></div>
     <script src="object.js"></script>
   </body>
 </html>
