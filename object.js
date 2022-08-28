@@ -23,6 +23,7 @@ function addBookToLibrary(title, author, pages, read) {
   let newBook = new Book(title, author, pages, read);
   myLibrary.push(newBook);
 }
+// displays a single book as a card
 function updateDisplay(book, index) {
   const bookCard = document.createElement('div');
   const bookName = document.createElement('div');
@@ -53,6 +54,7 @@ function updateDisplay(book, index) {
   removeButton.addEventListener('click', handleRemove);
   readButton.addEventListener('click', handleRead);
 }
+//displays all the books
 function displayBooks() {
   removeAllChildNodes(container);
   let i = 0;
@@ -61,7 +63,7 @@ function displayBooks() {
     i++;
   }
 }
-
+// rerenders book cards
 function handleRemove() {
   let index = this.id.toString();
   console.log(index.slice(-1));
@@ -76,6 +78,7 @@ function handleRead() {
   else myLibrary[index].read = 'no';
   displayBooks();
 }
+//toggles form visibility
 formButton.addEventListener('click', () => {
   if (formContainer.hidden == false) {
     formContainer.hidden = true;
@@ -83,6 +86,7 @@ formButton.addEventListener('click', () => {
     formContainer.hidden = false;
   }
 });
+//takes book info from the form adds to library and then rerenders the scrren
 const form = document.querySelector('#bookForm');
 function handleForm(event) {
   event.preventDefault();
@@ -100,6 +104,7 @@ function handleForm(event) {
 }
 form.addEventListener('submit', handleForm);
 
+//dummy books
 addBookToLibrary('house of leaves', 'Dan', '700', 'yes');
 addBookToLibrary('house of leaves2', 'Dan2', '7002', 'yes');
 addBookToLibrary('house of leaves3', 'Dan3', '7003', 'no');
